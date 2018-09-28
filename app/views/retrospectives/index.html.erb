@@ -1,0 +1,32 @@
+<p id='notice'><%= notice %></p>
+
+<h1>Retrospectives</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Description</th>
+      <th colspan='3'></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @retrospectives.each do |retrospective| %>
+      <tr>
+        <td><%= retrospective.title %></td>
+        <td><%= retrospective.date %></td>
+        <td><%= retrospective.description %></td>
+        <td><%= link_to 'Show', retrospective %></td>
+        <td><%= link_to 'Edit', edit_retrospective_path(retrospective) %></td>
+        <td><%= link_to 'Destroy', retrospective, method: :delete, 
+                data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Retrospective', new_retrospective_path %>

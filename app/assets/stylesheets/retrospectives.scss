@@ -1,0 +1,32 @@
+// Place all the styles related to the Retrospectives controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.landing_page {
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 3px 2px #e7e7e7;
+
+  img {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    margin-top: 40px;
+    background-color: #e7e7e7;
+    font-size: 16px;
+    padding: 12px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  .button:hover {
+    background-color: #555555;
+    color: #e7e7e7;
+  }
+}
+
+
+
