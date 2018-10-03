@@ -1,0 +1,45 @@
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+       - image: circleci/ruby:2.5.1-node-browsers
+         environment:
+          PGHOST: 127.0.0.1
+          PGUSER:
+          RAILS_ENV: test
+       - image: circleci/postgres:9.4
+         environment: 
+          POSTGRES_USER: 
+          POSTGRES_DB: retro_app_test
+          POSTGRES_PASSWORD: 
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: bundle check || bundle install
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+        
+      
+      - run: 
+          name: Database setup
+          command: |
+            bundle exec rake db:create
+            bundle exec rake db:schema:load
+
+      # Save test results for timing analysis
+      - store_test_results:
+          path: /tmp/test-results
