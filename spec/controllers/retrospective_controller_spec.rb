@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe RetrospectivesController, type: :controller do
+describe RetrospectivesController do
   describe 'GET #index' do
     it 'returns http success' do
       get :index

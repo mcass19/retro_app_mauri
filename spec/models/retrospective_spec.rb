@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Retrospective, type: :model do
+describe Retrospective do
   subject do
     Retrospective.new(title: 'Anything', description: 'Lorem ipsum',
                       date: Time.zone.now.strftime('%m/%d/%Y'))
