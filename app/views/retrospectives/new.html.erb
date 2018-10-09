@@ -1,0 +1,5 @@
+<% content_for :add_to_header do %>
+  <div id='button_timer'>
+    <%= button_to 'Post your topics!', new_retrospective_path, method: 'get', class: 'button', remote: true %>
+  </div>
+<% end %>

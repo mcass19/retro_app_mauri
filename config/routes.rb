@@ -3,5 +3,5 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  resources :retrospectives, only: %i[index]
+  resources :retrospectives, only: %i[index new]
 end
