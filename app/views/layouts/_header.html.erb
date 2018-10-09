@@ -1,6 +1,4 @@
-<% unless (controller_name == 'home') && (action_name == 'index') %>
-  <div class='top-navigation-bar'>
-    <%= image_tag 'wye-logo.png', class: 'right-top-logo' %>
-    <%= yield :add_to_header %>
-  </div>
-<% end %>
+<div class='top-navigation-bar'>
+  <%= image_tag 'wye-logo.png', class: 'right-top-logo' %>
+  <%= yield :add_to_header %>
+</div>
