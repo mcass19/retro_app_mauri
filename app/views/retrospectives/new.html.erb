@@ -6,6 +6,10 @@
     <div id='button_timer'>
       <%= button_to 'Post your topics!', new_retrospective_path, method: 'get', class: 'button', remote: true %>
     </div>
+
+    <div id='to_discuss_section', class='hide-discuss-section'>
+      <h1 class='to-discuss-title'>To discuss</h1>
+      <div class='to-discuss-div'></div>
+    </div>
   </div>
 <% end %>
-
