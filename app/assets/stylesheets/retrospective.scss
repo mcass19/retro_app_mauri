@@ -11,25 +11,35 @@
   }
 } 
 
-.discuss_section {
+.posting_phase {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   height: 100%;
   justify-content: center;
   margin: auto;
+  justify-content: space-evenly;
 
   &.hide {
     display: none;
   }
 }
 
-.discuss_section__title {
-  font-size: 20px;
+.posting_phase__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.discuss_section__box {
+.posting-phase__title {
+  font-size: 20px;
+
+  &.mention {
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+
+.posting_phase__box {
   width: 400px;
   height: 400px;
   border-style: solid;
