@@ -11,17 +11,27 @@
   }
 } 
 
-.discuss_section {
+.posting_phase {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   height: 100%;
   justify-content: center;
   margin: auto;
+  justify-content: space-evenly;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__title {
     font-size: 20px;
+
+    &.mention {
+      font-weight: normal;
+      font-style: italic;
+    }
   }
   
   &__box {
