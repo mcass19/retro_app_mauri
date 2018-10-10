@@ -1,0 +1,18 @@
+.top_navigation_bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 60px;
+  width: 100%;
+  background-color: #6E6E6E;
+}
+
+.right_top_logo {
+  position: absolute;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
