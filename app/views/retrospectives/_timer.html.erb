@@ -1,36 +1,4 @@
-<script type="text/javascript">
-  const elem = $('#counter');
-  let seconds = 0;
-  let minutes = 0;
-  let minutesToPrint;
-  let secondsToPrint;
-  const count = setInterval(function() {
-    seconds++;
-    if (seconds == 60) {
-      minutes++;
-      seconds = 0;
-    }
-    if (minutes < 10) {
-      minutesToPrint = '0' + minutes;
-    }
-    else {
-      minutesToPrint = minutes;
-    }
-    if (seconds < 10) {
-      secondsToPrint = '0' + seconds;
-    }
-    else {
-      secondsToPrint = seconds;
-    }
-    elem.text(minutesToPrint + ':' + secondsToPrint);
-    if (minutes == 50) {
-      elem.removeClass("timer").addClass("timer-last-minutes");
-    }
-    if (minutes == 60) {
-      clearInterval(count);
-    }
-  }, 1000);
-</script>
+<%= javascript_include_tag 'timer', async: true %>
 <div class="timer-background">
   <span id="counter" class="timer">00:00</span>
 </div>
