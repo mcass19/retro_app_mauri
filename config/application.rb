@@ -13,6 +13,7 @@ module RetroAppMauri
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
+    config.action_controller.include_all_helpers = true
 
     # Settings in config/environments/* take precedence over those
     # specified here.

@@ -1,0 +1,21 @@
+.retrospectives_index {
+  .button {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -114px;
+    margin-top: -7px;
+    color: #D2D2D2;
+    background-color: #6E6E6E;
+    padding: 12px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    &:hover {
+      background-color: #D2D2D2;
+      color: #6E6E6E;
+    }
+  }
+}
