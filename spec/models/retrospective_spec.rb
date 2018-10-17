@@ -4,8 +4,11 @@ require 'rails_helper'
 
 describe Retrospective do
   subject do
-    Retrospective.new(title: 'Anything', description: 'Lorem ipsum',
-                      date: Time.zone.now.strftime('%m/%d/%Y'))
+    Retrospective.new(
+      title: 'Anything',
+      description: 'Lorem ipsum',
+      date: Time.zone.now
+    )
   end
 
   it 'is valid with valid attributes' do
