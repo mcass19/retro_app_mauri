@@ -4,6 +4,7 @@
     <title>Wye_Retro_App</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield :add_scripts %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
   </head>

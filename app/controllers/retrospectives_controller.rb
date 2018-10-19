@@ -3,4 +3,6 @@
 # :nodoc:
 class RetrospectivesController < ApplicationController
   def index; end
+
+  def new; end
 end
