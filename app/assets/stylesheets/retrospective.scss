@@ -6,7 +6,7 @@
   font-size: 20px;
   font-weight: bold;
 
-  &.last-minutes {
+  &.last_minutes {
     color: #FF0000;
   }
 } 
@@ -20,18 +20,19 @@
   justify-content: center;
   margin: auto;
 
+  &__title {
+    font-size: 20px;
+  }
+  
+  &__box {
+    width: 400px;
+    height: 400px;
+    border-style: solid;
+    border-width: 2px;
+  }
+
   &.hide {
     display: none;
   }
 }
 
-.discuss_section__title {
-  font-size: 20px;
-}
-
-.discuss_section__box {
-  width: 400px;
-  height: 400px;
-  border-style: solid;
-  border-width: 2px;
-}
