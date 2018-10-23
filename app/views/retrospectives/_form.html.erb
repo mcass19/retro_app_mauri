@@ -2,11 +2,11 @@
   <h1 class='posting_phase__title mention'>To mention</h1>
   <div class='posting_phase__box'>
     <% @to_mention.each do |item| %>
-      <div  class='topics list mention'> 
+      <div class='topics list mention'> 
         <%= item %>
       </div>
     <% end %>
-    <%= form_tag retrospectives_path, remote: true do %>
+    <%= form_tag retrospectives_path, remote: true, class: 'topics_input' do %>
       <%= text_field_tag :topic_to_mention, nil, placeholder: 'To mention...', class: 'topics input' %>
     <% end %>
   </div>
@@ -15,11 +15,11 @@
   <h1 class='posting_phase__title'>To discuss</h1>
   <div class='posting_phase__box'> 
     <% @to_discuss.each do |item| %>
-      <div  class='topics list'> 
+      <div class='topics list'> 
         <%= item %>
       </div>
     <% end %>
-    <%= form_tag retrospectives_path, remote: true do %>
+    <%= form_tag retrospectives_path, remote: true, class: 'topics_input' do %>
       <%= text_field_tag :topic_to_discuss, nil, placeholder: 'To discuss...', class: 'topics input' %>
     <% end %>
   </div>
