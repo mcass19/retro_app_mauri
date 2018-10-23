@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery-ui
  */
 
 .main {
@@ -57,7 +58,19 @@
 
     &:hover {
       background-color: #FE9191;
-      color: #6E6E6E;
+    }
+
+    &.sorting_phase {
+      background-color: #60DF86;
+      margin-left: 20px;
+
+      &:hover {
+        background-color: #6EF997;
+      }
+
+      &.hide {
+        display: none;
+      }
     }
   }
 }
