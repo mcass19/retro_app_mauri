@@ -1,0 +1,4 @@
+<% if @new_mention %>
+  $('#mention_list').append("<%=j render('mention_topics') %>");
+  $('#mention_input').val('');
+<% end %>
