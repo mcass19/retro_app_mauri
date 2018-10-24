@@ -19,7 +19,7 @@ function executeTimer() {
     }
     timerToShow.text(minutesToPrint + ':' + secondsToPrint);
     if (minutes === 50) {
-      timerToShow.removeClass("timer").addClass("timer-last-minutes");
+      timerToShow.addClass("last_minutes");
     }
     if (minutes === 60) {
       clearInterval(count);

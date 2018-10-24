@@ -1,17 +1,14 @@
 <% content_for :add_scripts do %>
   <%= javascript_include_tag 'timer' %>
 <% end %>
-<div class='retrospectives_new'>
-  <% content_for :add_to_header do %>
-    <div class='retrospectives_new'>
-      <div id='button_timer'>
-        <%= button_to 'Post your topics!', new_retrospective_path, method: 'get', class: 'button', remote: true %>
-      </div>
-    </div>
-  <% end %>
 
-  <div id='to_discuss_section', class='hide_discuss_section'>
-    <h1 class='discuss_section__title'>To discuss</h1>
-    <div class='discuss_section__box'></div>
+<% content_for :add_to_header do %>
+  <div id='button_timer'>
+    <%= button_to 'Post your topics!', new_retrospective_path, method: 'get', class: 'button_app top_navigation', remote: true %>
   </div>
+<% end %>
+
+<div id='to_discuss_section', class='discuss_section hide'>
+  <h1 class='discuss_section__title'>To discuss</h1>
+  <div class='discuss_section__box'></div>
 </div>

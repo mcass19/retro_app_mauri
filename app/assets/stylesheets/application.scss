@@ -14,29 +14,50 @@
  *= require_self
  */
 
- body {
+.main {
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
- }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-.top_navigation_bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 60px;
-  width: 100%;
+.button_app {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #D2D2D2;
   background-color: #6E6E6E;
+  padding: 12px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+  font-size: 20px;
 
-  .right_top_logo {
+  &:hover {
+    background-color: #D2D2D2;
+    color: #6E6E6E;
+  }
+
+  &.center {
     position: absolute;
-    right: 0;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -114px;
+    margin-top: -7px;
+  }
+
+  &.top_navigation {
+    color: #6E6E6E;
+    background-color: #D2D2D2;
+    padding: 5px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+
+    &:hover {
+      background-color: #FE9191;
+      color: #6E6E6E;
+    }
   }
 }
