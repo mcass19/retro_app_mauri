@@ -37,8 +37,8 @@
   &__box {
     width: 400px;
     height: 400px;
-    border-style: solid;
-    border-width: 2px;
+    border: 2px solid;
+    overflow: scroll;
   }
 
   &.hide {
@@ -46,3 +46,29 @@
   }
 }
 
+.topics {
+  margin: auto;
+  padding: 10px;
+  border: .7px solid #7c7c7c;
+  border-radius: 5px;
+
+  &.input {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 50%;
+    font-size: 1em;
+    color: #7c7c7c;
+  }
+  
+  &.list {
+    margin-top: 5px;
+    width: 90%;
+    word-wrap: break-word;
+
+    &.mention {
+      border-color: green;
+      border-radius: 3px;
+    }
+  }
+}

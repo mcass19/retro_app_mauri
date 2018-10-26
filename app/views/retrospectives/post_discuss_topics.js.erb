@@ -1,0 +1,4 @@
+<% if @new_discuss %>
+  $('#discuss_list').append("<%=j render('discuss_topics') %>");
+  $('#discuss_input').val('');
+<% end %>

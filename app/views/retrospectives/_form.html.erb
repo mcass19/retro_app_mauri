@@ -1,0 +1,18 @@
+<div class='posting_phase__section'>
+  <h1 class='posting_phase__title mention'>To mention</h1>
+  <div class='posting_phase__box'>
+    <div id='mention_list'></div>
+    <%= form_tag post_mention_topics_retrospective_path, remote: true do %>
+      <%= text_field_tag :topic_to_mention, nil, placeholder: 'To mention...', class: 'topics input', id: 'mention_input', required: true %>
+    <% end %>
+  </div>
+</div>
+<div class='posting_phase__section'>
+  <h1 class='posting_phase__title'>To discuss</h1>
+  <div class='posting_phase__box'> 
+    <div id='discuss_list'></div>
+    <%= form_tag post_discuss_topics_retrospective_path, remote: true, id: 'discuss_form' do %>
+      <%= text_field_tag :topic_to_discuss, nil, placeholder: 'To discuss...', class: 'topics input', id: 'discuss_input', required: true %>
+    <% end %>
+  </div>
+</div>
