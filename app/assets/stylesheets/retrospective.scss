@@ -73,3 +73,24 @@
     }
   }
 }
+
+.action_plans {
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+  &__title {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  &__box {
+    width: 600px;
+    height: 400px;
+    border: 2px solid;
+    overflow: scroll;
+  }
+
+  &.hide {
+    display: none;
+  }
+}

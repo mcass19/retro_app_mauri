@@ -1,7 +1,7 @@
 $('#button_timer').html("<%=j render('timer') %>");
-$('#posting').removeClass('hide');
 executeTimer();
 
+$('#posting').removeClass('hide');
 $('#posting').html("<%=j render('form') %>");
 
 $('#sorting_button').removeClass('hide');
@@ -20,6 +20,14 @@ $('#sorting_button').click(function(event) {
     ev.preventDefault();
     $('#button_timer').html("<%=j render('timer') %>");
     executeTimer();
+
+    $(".list").sortable({
+      disabled: true
+    });
+    $('#discussion').removeClass('hide');
+    $('#discussion').html("<%=j render('action_plans') %>");
+    $('.posting_phase__box').css('height', '200');
+    $('#discussion_button').addClass('hide');
   });
 });
 
