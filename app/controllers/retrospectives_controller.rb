@@ -7,7 +7,8 @@ class RetrospectivesController < ApplicationController
   def new
     @to_mention = []
     @to_discuss = []
-    set_session_params(@to_mention, @to_discuss)
+    @action_plans = []
+    set_session_params(@to_mention, @to_discuss, @action_plans)
   end
 
   def post_mention_topics
@@ -28,11 +29,21 @@ class RetrospectivesController < ApplicationController
     @new_discuss = incoming_discuss
   end
 
+  def add_action_plan
+    return if params[:action_plan].blank?
+
+    action_plans_params
+    incoming_plan = params[:action_plan]
+    @action_plans << incoming_plan
+    @new_action_plan = incoming_plan
+  end
+
   private
 
-  def set_session_params(to_mention, to_discuss)
+  def set_session_params(to_mention, to_discuss, action_plans)
     session[:array_to_mention] = to_mention
     session[:array_to_discuss] = to_discuss
+    session[:array_action_plans] = action_plans
   end
 
   def mention_params
@@ -43,5 +54,10 @@ class RetrospectivesController < ApplicationController
   def discuss_params
     @to_discuss = session[:array_to_discuss]
     @new_discuss = nil
+  end
+
+  def action_plans_params
+    @action_plans = session[:array_action_plans]
+    @new_action_plan = nil
   end
 end

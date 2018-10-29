@@ -1,2 +1,7 @@
 <h1 class='action_plans__title'>Action plans</h1>
-<div class='action_plans__box'></div>
+<div class='action_plans__box'>
+  <div id='action_plans_list' class='list'></div>
+  <%= form_tag add_action_plan_retrospective_path, remote: true do %>
+    <%= text_field_tag :action_plan, nil, placeholder: 'Add action plan...', class: 'topics input', id: 'action_plan_input', required: true %>
+  <% end %>
+</div>

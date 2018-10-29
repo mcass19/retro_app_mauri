@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resource :retrospective, only: [] do
     post :post_mention_topics
     post :post_discuss_topics
+    post :add_action_plan
   end
 end
