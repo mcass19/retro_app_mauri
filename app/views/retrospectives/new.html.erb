@@ -6,6 +6,7 @@
   <div id='button_timer'>
     <%= button_to 'Post your topics!', new_retrospective_path, method: 'get', class: 'button_app top_navigation', remote: true %>
   </div>
+  <%= button_to 'Sort & Discuss!', new_retrospective_path, method: 'get', id: 'sorting_button', class: 'button_app top_navigation sorting_phase hide', remote: true %>
 <% end %>
 
 <div id='posting', class='posting_phase hide'></div>

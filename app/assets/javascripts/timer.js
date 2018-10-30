@@ -1,7 +1,7 @@
 function executeTimer() {
   let timerToShow = $('#counter');
   let seconds = minutes = minutesToPrint = secondsToPrint = 0;
-  const count = setInterval(() => {
+  count = setInterval(() => {
     seconds++;
     if (seconds === 60) {
       minutes++;

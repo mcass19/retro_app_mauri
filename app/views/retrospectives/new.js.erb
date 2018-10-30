@@ -1,4 +1,16 @@
 $('#button_timer').html("<%=j render('timer') %>");
 $('#posting').removeClass('hide');
 executeTimer();
+
 $('#posting').html("<%=j render('form') %>");
+
+$('#sorting_button').removeClass('hide');
+$('#sorting_button').click(function(event) {
+  event.preventDefault();
+  clearInterval(count);
+  $('.input').hide();
+  $(".list").sortable({
+    axis: "y",
+    cursor: "move"
+  });
+});
