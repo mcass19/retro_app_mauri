@@ -13,4 +13,14 @@ $('#sorting_button').click(function(event) {
     axis: "y",
     cursor: "move"
   });
+  
+  $('#sorting_button').attr('id', 'discussion_button');
+  $('#discussion_button').attr('value', 'Start Discussion!');
+  $('#discussion_button').unbind('click').click(function(ev) {
+    ev.preventDefault();
+    $('#button_timer').html("<%=j render('timer') %>");
+    executeTimer();
+  });
 });
+
+
