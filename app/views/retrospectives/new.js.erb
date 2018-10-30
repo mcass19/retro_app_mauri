@@ -1,14 +1,14 @@
 $('#button_timer').html("<%=j render('timer') %>");
 executeTimer();
 
-$('#posting').removeClass('hide');
+$('#posting').removeClass('hidden').addClass('posting_phase');
 $('#posting').html("<%=j render('form') %>");
 
-$('#sorting_button').removeClass('hide');
+$('#sorting_button').removeClass('hidden').addClass('button_app top_navigation sorting_phase');
 $('#sorting_button').click(function(event) {
   event.preventDefault();
   clearInterval(count);
-  $('.input').hide();
+  $('.input').removeClass('input').addClass('hidden');
   $(".list").sortable({
     axis: "y",
     cursor: "move"
@@ -24,10 +24,10 @@ $('#sorting_button').click(function(event) {
     $(".list").sortable({
       disabled: true
     });
-    $('#discussion').removeClass('hide');
+    $('#discussion').removeClass('hidden').addClass('action_plans');
     $('#discussion').html("<%=j render('action_plans') %>");
-    $('.posting_phase__box').css('height', '200');
-    $('#discussion_button').addClass('hide');
+    $('.posting_phase__box').addClass('discussion_phase');
+    $('#discussion_button').removeClass('button_app top_navigation sorting_phase').addClass('hidden');
   });
 });
 

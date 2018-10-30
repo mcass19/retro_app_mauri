@@ -39,10 +39,10 @@
     height: 400px;
     border: 2px solid;
     overflow: scroll;
-  }
 
-  &.hide {
-    display: none;
+    &.discussion_phase {
+      height: 200px;
+    }
   }
 }
 
@@ -88,9 +88,5 @@
     height: 400px;
     border: 2px solid;
     overflow: scroll;
-  }
-
-  &.hide {
-    display: none;
   }
 }

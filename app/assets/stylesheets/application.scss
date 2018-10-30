@@ -24,6 +24,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .button_app {
   display: block;
   margin-left: auto;
@@ -66,10 +70,6 @@
 
       &:hover {
         background-color: #6EF997;
-      }
-
-      &.hide {
-        display: none;
       }
     }
   }
