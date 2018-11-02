@@ -1,0 +1,4 @@
+<% if @new_owner %>
+  $("<%="#modal_body_#{@id_action_plan}"%>").append("<%=j render('action_plan_owner') %>");
+  $("<%="#owner_input_#{@id_action_plan}"%>").removeClass('input').addClass('hidden');
+<% end %>
