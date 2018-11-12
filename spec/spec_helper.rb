@@ -20,14 +20,7 @@ require 'action_dispatch'
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
-# See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-
-Capybara.register_driver(:chrome) do |app|
-  Capybara::Selenium::Driver.new(app, browser: :chrome)
-end
-
-ActionDispatch::SystemTestCase.driven_by :chrome
-Capybara.javascript_driver = :chrome
+# See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configurationxs
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
