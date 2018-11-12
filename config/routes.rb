@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  # mount_ember_app :frontend, to: "/"
+  # commented for now, to not break everything
   root 'home#index'
 
   resources :retrospectives, only: %i[index new]
