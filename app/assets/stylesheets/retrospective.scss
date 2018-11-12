@@ -66,6 +66,7 @@
     margin-bottom: 5px;
     width: 90%;
     word-wrap: break-word;
+    display: inherit;
 
     &.mention {
       border-color: green;
