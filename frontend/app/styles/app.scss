@@ -1,0 +1,26 @@
+@import 'index';
+
+.ember-application {
+  background-color: #ABAAAA;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.button_app {
+  text-decoration: none;
+  color: #D2D2D2;
+  background-color: #6E6E6E;
+  padding: 10px 20px;
+  border-width: 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+  font-size: 20px;
+  
+  &:hover {
+    background-color: #D2D2D2;
+    color: #6E6E6E;
+  }
+
+  &.home {
+    margin-top: 80px;
+  }
+}

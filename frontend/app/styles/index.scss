@@ -1,0 +1,31 @@
+.home_title {
+  color: #424242;
+  font-size: 100px;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-shadow: #838383 3px 2px 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.home_center_items {
+  display: flex;
+  justify-content: center;
+}
+
+.wyeworks_home_icon {
+  height: 180px;
+  margin-top: 40px;
+}
+
+.languages_icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 60px;
+
+  &.ember {
+    right: 70px;
+    bottom: 12px;
+  }
+}
