@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-
   resources :retrospectives, only: %i[index new]
   resource :retrospective, only: [] do
     post :post_mention_topics
@@ -10,5 +9,5 @@ Rails.application.routes.draw do
     post :set_action_plan_owner
   end
 
-  mount_ember_app :frontend, to: "/"
+  mount_ember_app :frontend, to: '/'
 end
