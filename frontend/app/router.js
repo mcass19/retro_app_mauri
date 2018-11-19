@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('retrospective');
+  this.route('sign-up');
 });
 
 export default Router;

@@ -1,0 +1,46 @@
+<img src="assets/images/wyeworks2.png" alt="" class="wyeworks_sign_icon" >
+
+<div class="sign_wrapper">  
+  <h1 class="sign_title">Create your account</h1>
+
+  <div class="sign_box">
+    {{input 
+      value=username 
+      placeholder="Username" 
+      class="input_sign"
+    }}
+    {{input 
+      value=email 
+      placeholder="Email" 
+      class="input_sign"
+    }}
+    {{input 
+      value=password 
+      placeholder="Password" 
+      type="password" 
+      class="input_sign"
+    }}
+    <label for="profile_img">Choose a profile image</label>
+    <input 
+      multiple="true" 
+      onchange={{action "uploadImage"}} 
+      accept="image/png,image/jpeg" 
+      type="file" 
+      name="file"
+      id="profile_img"
+      class="input_sign choose_img"
+    >
+    <button 
+      class="button_app sign"
+      {{action "signUpUser" username email password}}
+    > Sign up!
+    </button>
+  </div>
+
+  <p class="login_end_phrase">
+    Have an account?
+    {{#link-to "sign-up"}}
+      Log in
+    {{/link-to}}
+  </p>
+</div>
