@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     post :set_action_plan_owner
   end
 
+  resources :users, only: :create
+
   mount_ember_app :frontend, to: '/'
 end
