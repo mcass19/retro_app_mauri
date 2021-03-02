@@ -1,0 +1,18 @@
+<li class='topics list plan'> 
+  <%= @action_plans.last %>
+  <%= button_tag 'Options', class: 'button_app options_action_plan', onclick: "openModal(#{@cant_action_plans})" %>
+</li>
+
+<div id="action_plan_modal_<%= @cant_action_plans %>" class="hidden">
+  <div class="modal__content">
+    <div class="modal__header">
+      <span id='close_symbol_<%= @cant_action_plans %>' class="modal__close">&times;</span>
+      <p class='modal__title'>Owner</p>
+    </div>
+    <div id="modal_body_<%= @cant_action_plans %>" class="modal__body">
+      <%= form_tag set_action_plan_owner_retrospective_path(id_ac: @cant_action_plans), remote: true do %>
+        <%= text_field_tag :action_plan_owner, nil, placeholder: 'Set action plan owner...', class: 'topics input', id: "owner_input_#{@cant_action_plans}", required: true %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -72,6 +72,11 @@
       border-color: green;
       border-radius: 3px;
     }
+
+    &.owner {
+      width: 50%;
+      text-align: center;
+    }
   }
 }
 

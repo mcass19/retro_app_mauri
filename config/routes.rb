@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     post :post_mention_topics
     post :post_discuss_topics
     post :add_action_plan
+    post :set_action_plan_owner
   end
 end
